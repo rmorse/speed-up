@@ -18,19 +18,16 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-// Extract the autoloader to it's own file
+// Load the autoloader from it's own file
 require_once plugin_dir_path( __FILE__ ) . 'autoload.php';
 
-/**
- * The code that runs during plugin activation.
- */
+
+// The code that runs during plugin activation.
 function activate_speed_up() {
 	\Speed_Up\Core\Activator::activate();
 }
 
-/**
- * The code that runs during plugin deactivation.
-  */
+// The code that runs during plugin deactivation.
 function deactivate_speed_up() {
 	\Speed_Up\Core\Deactivator::deactivate();
 }
@@ -39,11 +36,7 @@ register_activation_hook( __FILE__, 'activate_speed_up' );
 register_deactivation_hook( __FILE__, 'deactivate_speed_up' );
 
 
-/**
- * Begins execution of the plugin.
- *
- * @since    1.0.0
- */
+// Begins execution of the plugin.
 function run_speed_up() {
 	$plugin = new \Speed_Up\Run();
 }
