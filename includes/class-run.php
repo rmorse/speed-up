@@ -16,10 +16,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 class Run {
-
-	/**
-	 * @since    3.0.0
-	 */
 	public function __construct() {
 		// Loads an admin notice
 		$admin_notices = new \Speed_Up\Admin\Notices();
